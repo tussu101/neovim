@@ -80,6 +80,7 @@ noremap <Leader>v :vertical
 noremap <Leader>n :tabnew
 noremap <Leader>c :tabc
 noremap <Leader>f :FZF
+noremap <Leader>o :tabo
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
