@@ -76,11 +76,12 @@ noremap <Leader>Q :q!
 noremap <Leader>w :w
 noremap <Leader>x :wq
 noremap <Leader>t :TerminalSplit bash
-noremap <Leader>v :vertical
+noremap <Leader>v :vertical res
 noremap <Leader>n :tabnew
 noremap <Leader>c :tabc
 noremap <Leader>f :FZF
 noremap <Leader>o :tabo
+noremap <Leader>r :res
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
