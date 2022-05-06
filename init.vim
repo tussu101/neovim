@@ -26,6 +26,7 @@ Plug 'puremourning/vimspector'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'vimwiki/vimwiki'
 
 set encoding=UTF-8
 call plug#end()
@@ -77,7 +78,7 @@ noremap <Leader>w :w
 noremap <Leader>x :wq
 noremap <Leader>t :TerminalSplit bash
 noremap <Leader>v :vertical res15
-noremap <Leader>n :tabnew
+noremap <Leader>n :tabnew 
 noremap <Leader>c :tabc
 noremap <Leader>f :FZF
 noremap <Leader>o :tabo
@@ -96,3 +97,7 @@ let g:tmuxline_preset = {
         \ 'options': {
         \ 'status-justify': 'left'}
         \ }
+
+let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
