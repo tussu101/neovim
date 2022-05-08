@@ -100,4 +100,3 @@ let g:tmuxline_preset = {
 
 let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-
