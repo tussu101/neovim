@@ -28,6 +28,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vimwiki/vimwiki'
 
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
 set encoding=UTF-8
 call plug#end()
 
@@ -100,3 +103,6 @@ let g:tmuxline_preset = {
 
 let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
