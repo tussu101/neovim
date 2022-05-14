@@ -90,7 +90,7 @@ noremap <Leader>o :tabo
 noremap <Leader>r :res6
 
 " Nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>N :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
