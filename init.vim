@@ -42,17 +42,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 set encoding=UTF-8
 call plug#end()
 
-" Nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-nmap <F8> :TagbarToggle<CR>
-
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
 " General Setting
 :set nocompatible
 :filetype off
@@ -99,6 +88,17 @@ noremap <Leader>c :tabc
 noremap <Leader>f :FZF
 noremap <Leader>o :tabo
 noremap <Leader>r :res6
+
+" Nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+nmap <F8> :TagbarToggle<CR>
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
 
 " Vim air-line
 let g:airline#extensions#tabline#enabled = 1
