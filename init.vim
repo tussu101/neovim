@@ -1,6 +1,4 @@
-:set nocompatible
-:filetype off
-
+" Plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
@@ -27,6 +25,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vimwiki/vimwiki'
+Plug 'airblade/vim-gitgutter'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -34,6 +33,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 set encoding=UTF-8
 call plug#end()
 
+" Nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -44,6 +44,9 @@ nmap <F8> :TagbarToggle<CR>
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
+" General Setting
+:set nocompatible
+:filetype off
 filetype plugin indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -69,6 +72,7 @@ set hidden
 set nowrap
 set wrap
 set linebreak
+set updatetime=1000 "set update time for gitgutter update
 
 :imap jj <Esc>
 
@@ -87,6 +91,7 @@ noremap <Leader>f :FZF
 noremap <Leader>o :tabo
 noremap <Leader>r :res6
 
+" Vim air-line
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.config/tmux/tmux-status.conf"
@@ -101,8 +106,10 @@ let g:tmuxline_preset = {
         \ 'status-justify': 'left'}
         \ }
 
+" Vimwiki
 let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+" Prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
