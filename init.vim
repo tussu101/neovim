@@ -127,7 +127,7 @@ let g:prettier#autoformat_require_pragma = 0
 let g:gitgutter_async = 0
 
 " Ale Linting
-let g:ale_sign_column_always=1
+" let g:ale_sign_column_always=1
 let g:ale_lint_on_enter=1
 let g:ale_lint_on_text_changed='always'
 let g:ale_echo_msg_error_str='E'
