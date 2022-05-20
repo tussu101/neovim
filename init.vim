@@ -171,3 +171,17 @@ let g:mkdp_theme = 'dark'
 
 " ncm2-look
 let g:ncm2_look_enabled = 1
+
+" vimspecor
+let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap <leader>da :call vimspector#Launch()<CR>
+nnoremap <leader>dx :call vimspector#Reset()<CR>
+nnoremap <S-k>dx :call vimspector#StepOut()<CR>
+nnoremap <S-l>dx :call vimspector#StepInto()<CR>
+nnoremap <S-j>dx :call vimspector#StepOver()<CR>
+nnoremap <leader>d_ :call vimspector#Restart()<CR>
+nnoremap <leader>dn :call vimspector#Continue()<CR>
+nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
+nnoremap <leader>dh :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>de :call vimspector#ToggleConditionalBreakpoint()<CR>
+nnoremap <leader>dX :call vimspector#ClearBreakpoints()<CR>
