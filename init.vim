@@ -34,12 +34,15 @@ Plug 'dense-analysis/ale'
 Plug 'fisadev/vim-isort'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'filipekiss/ncm2-look.vim'
-
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'mattn/emmet-vim'
+Plug 'alvan/vim-closetag'
+Plug 'AndrewRadev/tagalong.vim'
 
 set encoding=UTF-8
 call plug#end()
+
 
 " General Setting
 :set nocompatible
@@ -88,6 +91,7 @@ noremap <Leader>f :FZF
 noremap <Leader>o :tabo
 noremap <Leader>r :res6
 
+
 " Nerdtree
 nnoremap <leader>N :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -98,6 +102,7 @@ nmap <F8> :TagbarToggle<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+
 
 " Vim air-line
 let g:airline#extensions#tabline#enabled = 1
@@ -114,16 +119,20 @@ let g:tmuxline_preset = {
         \ 'status-justify': 'left'}
         \ }
 
+
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
 
 " Prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
+
 " Gitgutter
 let g:gitgutter_async = 0
+
 
 " Ale Linting
 let g:ale_lint_on_enter=1
@@ -134,8 +143,10 @@ let g:ale_linters={'python' : ['flake8'], 'r': ['linter']}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 
+
 " vim-isort
 let g:vim_isort_map = '<C-i>'
+
 
 " markdown-preview.nvim
 let g:mkdp_auto_start = 0
@@ -168,5 +179,10 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'dark'
 
+
 " ncm2-look
 let g:ncm2_look_enabled = 1
+
+
+" emmet
+let g:user_emmet_leader_key=','
