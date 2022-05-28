@@ -39,6 +39,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
+Plug 'Shougo/deoplete.nvim'
 
 set encoding=UTF-8
 call plug#end()
@@ -186,3 +187,7 @@ let g:ncm2_look_enabled = 1
 
 " emmet
 let g:user_emmet_leader_key=','
+
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
