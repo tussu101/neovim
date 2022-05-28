@@ -34,7 +34,6 @@ Plug 'dense-analysis/ale'
 Plug 'fisadev/vim-isort'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'filipekiss/ncm2-look.vim'
-" post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
