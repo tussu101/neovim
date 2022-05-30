@@ -86,7 +86,7 @@ noremap <Leader>t :TerminalSplit bash
 noremap <Leader>v :vertical res15
 noremap <Leader>n :tabnew 
 noremap <Leader>c :tabc
-noremap <Leader>f :FZF
+noremap <Leader>F :FZF
 noremap <Leader>o :tabo
 noremap <Leader>r :res6
 
