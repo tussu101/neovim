@@ -89,6 +89,7 @@ noremap <Leader>c :tabc
 noremap <Leader>F :FZF
 noremap <Leader>o :tabo
 noremap <Leader>r :res6
+noremap <Leader>m :tabm 
 
 
 " Nerdtree
