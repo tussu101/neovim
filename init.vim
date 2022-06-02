@@ -38,7 +38,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
-Plug 'wlangstroth/vim-racket'  "racket language
+Plug 'wlangstroth/vim-racket'
 
 set encoding=UTF-8
 call plug#end()
