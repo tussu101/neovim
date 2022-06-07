@@ -390,4 +390,3 @@ augroup vimbettersml
 
   " Uncomment to try out same-width conceal characters
   " let g:sml_greek_tyvar_show_tick = 1
-augroup END
