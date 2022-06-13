@@ -52,8 +52,8 @@ filetype plugin indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set t_Co=256
-set number relativenumber
-set nu rnu
+set number
+set relativenumber
 set nowrap
 set smartcase
 set hlsearch
