@@ -73,7 +73,7 @@ set wrap
 set linebreak
 set updatetime=1000 "set update time for gitgutter update
 
-:imap jj <Esc>
+:imap jk <Esc>
 
 let mapleader = " "
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
