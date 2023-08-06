@@ -23,7 +23,6 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
