@@ -118,12 +118,6 @@ let g:tmuxline_preset = {
         \ 'status-justify': 'left'}
         \ }
 
-
-" Vimwiki
-let g:vimwiki_list = [{'path': '~/documents/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
-
 " Prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
