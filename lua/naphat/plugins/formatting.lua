@@ -20,6 +20,10 @@ return {
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				java = { "google-java-format" },
+				kotlin = { "ktlint" },
+				bash = { "beautysh" },
+				rust = { "rustfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
