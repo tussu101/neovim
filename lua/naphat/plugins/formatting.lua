@@ -24,6 +24,12 @@ return {
 				kotlin = { "ktlint" },
 				bash = { "beautysh" },
 				rust = { "rustfmt" },
+				go = { "asmfmt" },
+				c = { "astyle" },
+				cpp = { "astyle" },
+				c_sharp = { "astyle" },
+				sql = { "pg_format" },
+				r = { "styler" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
