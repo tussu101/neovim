@@ -12,6 +12,7 @@ return {
 
 		local null_ls_utils = require("null-ls.utils")
 
+		-- list of formatter for mason_null_ls
 		mason_null_ls.setup({
 			ensure_installed = {
 				"prettier", -- prettier formatter

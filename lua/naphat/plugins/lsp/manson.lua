@@ -43,6 +43,7 @@ return {
 			automatic_installation = true, -- not the same as ensure_installed
 		})
 
+		-- list of formatter for mason to install
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettier", -- prettier formatter
