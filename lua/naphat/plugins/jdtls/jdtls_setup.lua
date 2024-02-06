@@ -218,4 +218,73 @@ function M.setup()
 	-- require("jdtls.keymaps")
 end
 
+-- Attach the jdtls for each java buffer. HOWEVER, this plugin loads
+-- depending on filetype, so this autocmd doesn't run for the first file.
+-- For that, we call directly below.
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = java_filetypes,
+	callback = attach_jdtls,
+})
+
+-- Setup keymap and dap after the lsp is fully attached.
+-- https://github.com/mfussenegger/nvim-jdtls#nvim-dap-configuration
+-- https://neovim.io/doc/user/lsp.html#LspAttach
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client.name == "jdtls" then
+			local wk = require("which-key")
+			wk.register({
+				["<leader>cx"] = { name = "+extract" },
+				["<leader>cxv"] = { require("jdtls").extract_variable_all, "Extract Variable" },
+				["<leader>cxc"] = { require("jdtls").extract_constant, "Extract Constant" },
+				["gs"] = { require("jdtls").super_implementation, "Goto Super" },
+				["gS"] = { require("jdtls.tests").goto_subjects, "Goto Subjects" },
+				["<leader>co"] = { require("jdtls").organize_imports, "Organize Imports" },
+			}, { mode = "n", buffer = args.buf })
+			wk.register({
+				["<leader>c"] = { name = "+code" },
+				["<leader>cx"] = { name = "+extract" },
+				["<leader>cxm"] = {
+					[[<ESC><CMD>lua require('jdtls').extract_method(true)<CR>]],
+					"Extract Method",
+				},
+				["<leader>cxv"] = {
+					[[<ESC><CMD>lua require('jdtls').extract_variable_all(true)<CR>]],
+					"Extract Variable",
+				},
+				["<leader>cxc"] = {
+					[[<ESC><CMD>lua require('jdtls').extract_constant(true)<CR>]],
+					"Extract Constant",
+				},
+			}, { mode = "v", buffer = args.buf })
+
+			if opts.dap and Util.has("nvim-dap") and mason_registry.is_installed("java-debug-adapter") then
+				-- custom init for Java debugger
+				require("jdtls").setup_dap(opts.dap)
+				require("jdtls.dap").setup_dap_main_class_configs()
+
+				-- Java Test require Java debugger to work
+				if opts.test and mason_registry.is_installed("java-test") then
+					-- custom keymaps for Java test runner (not yet compatible with neotest)
+					wk.register({
+						["<leader>t"] = { name = "+test" },
+						["<leader>tt"] = { require("jdtls.dap").test_class, "Run All Test" },
+						["<leader>tr"] = { require("jdtls.dap").test_nearest_method, "Run Nearest Test" },
+						["<leader>tT"] = { require("jdtls.dap").pick_test, "Run Test" },
+					}, { mode = "n", buffer = args.buf })
+				end
+			end
+
+			-- User can set additional keymaps in opts.on_attach
+			if opts.on_attach then
+				opts.on_attach(args)
+			end
+		end
+	end,
+})
+
+-- Avoid race condition by calling attach the first time, since the autocmd won't fire.
+attach_jdtls()
+
 return M
