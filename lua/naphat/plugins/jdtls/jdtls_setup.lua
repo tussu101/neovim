@@ -2,8 +2,8 @@ local M = {}
 
 function M.setup()
 	local jdtls = require("jdtls")
-	local jdtls_setup = require("jdtls.setup")
 	local jdtls_dap = require("jdtls.dap")
+	local jdtls_setup = require("jdtls.setup")
 	local home = os.getenv("HOME")
 
 	local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
@@ -104,7 +104,7 @@ function M.setup()
 		-- eclipse.jdt.ls installation                                           the actual version
 
 		-- 💀
-		"/Library/Java/jdt-language-server-1.9.0-202203031534/config_ss_mac/",
+		"/Library/Java/jdt-language-server-1.9.0-202203031534/config_mac/",
 		path_to_config,
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
 		-- Must point to the                      Change to one of `linux`, `win` or `mac`
@@ -182,13 +182,13 @@ function M.setup()
 				useBlocks = true,
 			},
 			-- configuration = {
-			-- 	runtimes = {
-			-- 		{
-			-- 			name = "java-17-openjdk",
-			-- 			path = "/usr/lib/jvm/default-runtime/bin/java",
-			-- 		},
-			-- 	},
-			-- },
+			--     runtimes = {
+			--         {
+			--             name = "java-17-openjdk",
+			--             path = "/usr/lib/jvm/default-runtime/bin/java"
+			--         }
+			--     }
+			-- }
 			-- project = {
 			-- 	referencedLibraries = {
 			-- 		"**/lib/*.jar",
