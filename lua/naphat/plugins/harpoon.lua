@@ -1,32 +1,3 @@
--- return {
--- 	"ThePrimeagen/harpoon",
--- 	dependencies = {
--- 		"nvim-lua/plenary.nvim",
--- 	},
--- 	config = function()
--- 		-- set keymaps
--- 		local keymap = vim.keymap -- for conciseness
---
--- 		keymap.set(
--- 			"n",
--- 			"<leader>hm",
--- 			"<cmd>lua require('harpoon.mark').add_file()<cr>",
--- 			{ desc = "Mark file with harpoon" }
--- 		)
--- 		keymap.set(
--- 			"n",
--- 			"<leader>hn",
--- 			"<cmd>lua require('harpoon.ui').nav_next()<cr>",
--- 			{ desc = "Go to next harpoon mark" }
--- 		)
--- 		keymap.set(
--- 			"n",
--- 			"<leader>hp",
--- 			"<cmd>lua require('harpoon.ui').nav_prev()<cr>",
--- 			{ desc = "Go to previous harpoon mark" }
--- 		)
--- 	end,
--- }
 return {
 	-- Harpoon plugin configuration
 	{
@@ -123,6 +94,27 @@ return {
 					require("harpoon"):list():select(7)
 				end,
 				desc = "harpoon to file 7",
+			},
+			{
+				"<leader>8",
+				function()
+					require("harpoon"):list():select(8)
+				end,
+				desc = "harpoon to file 8",
+			},
+			{
+				"<leader>9",
+				function()
+					require("harpoon"):list():select(9)
+				end,
+				desc = "harpoon to file 9",
+			},
+			{
+				"<leader>0",
+				function()
+					require("harpoon"):list():select(0)
+				end,
+				desc = "harpoon to file 0",
 			},
 		},
 	},
