@@ -37,3 +37,5 @@ keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current file" }) -- sa
 keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit current buffer" }) -- quit current buffer
 keymap.set("n", "<leader>Q", "<cmd>q!<CR>", { desc = "Force quit current buffer" }) -- force quit current buffer
 keymap.set("n", "<leader>x", "<cmd>wq<CR>", { desc = "Save and quit current buffer" }) -- save and quit current buffer
+
+keymap.set("n", "<leader>cn", ":%s/", { desc = "%s/oldName/newName/g" })
