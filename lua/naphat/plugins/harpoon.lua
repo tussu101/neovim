@@ -109,13 +109,6 @@ return {
 				end,
 				desc = "harpoon to file 9",
 			},
-			{
-				"<leader>0",
-				function()
-					require("harpoon"):list():select(0)
-				end,
-				desc = "harpoon to file 0",
-			},
 		},
 	},
 }
