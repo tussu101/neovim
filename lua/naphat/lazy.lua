@@ -13,7 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "naphat.plugins" }, { import = "naphat.plugins.lsp" } }, {
 	install = {
-		colorscheme = { "nightfly" },
+		-- colorscheme = { "nightfly" },
+		colorscheme = { "gruvbox" },
 	},
 	checker = {
 		enabled = true,

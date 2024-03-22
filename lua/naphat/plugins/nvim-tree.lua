@@ -9,8 +9,12 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		-- change color for arrows in tree to light blue
-		vim.cmd([[ highlight NvimTreeFolderArrowClosed guifg=#3FC5FF ]])
-		vim.cmd([[ highlight NvimTreeFolderArrowOpen guifg=#3FC5FF ]])
+		-- vim.cmd([[ highlight NvimTreeFolderArrowClosed guifg=#3FC5FF ]])
+		-- vim.cmd([[ highlight NvimTreeFolderArrowOpen guifg=#3FC5FF ]])
+
+		-- change color for arrows in tree to gruvbox theme
+		vim.cmd([[ highlight NvimTreeFolderArrowClosed guifg=#928374 ]])
+		vim.cmd([[ highlight NvimTreeFolderArrowOpen guifg=#928374 ]])
 
 		-- configure nvim-tree
 		nvimtree.setup({
