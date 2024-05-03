@@ -6,7 +6,6 @@ return {
 	},
 	config = function()
 		-- import comment plugin safely
-		-- new comment test
 		local comment = require("Comment")
 
 		local ts_context_commentstring = require("ts_context_commentstring.integrations.comment_nvim")
