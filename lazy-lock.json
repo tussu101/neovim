@@ -48,5 +48,5 @@
   "vim-ReplaceWithRegister": { "branch": "master", "commit": "aad1e8fa31cb4722f20fe40679caa56e25120032" },
   "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" },
   "vim-tmux-navigator": { "branch": "master", "commit": "5b3c701686fb4e6629c100ed32e827edf8dad01e" },
-  "which-key.nvim": { "branch": "main", "commit": "30cf839c82bcc0f90be951f8834c256c1cdc295c" }
+  "which-key.nvim": { "branch": "main", "commit": "f8a9e777e3b1cd2c0d818f1a0350f39bb73bc1b0" }
 }
